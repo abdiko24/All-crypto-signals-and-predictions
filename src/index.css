@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-buy: #22c55e;
+  --color-brand-sell: #ef4444;
+  --color-brand-neutral: #333333;
+}
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-white antialiased font-sans border-8 border-[#1A1A1A] min-h-screen relative pb-10;
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10;
+  }
+
+  .indicator-buy {
+    @apply text-green-400 bg-green-500/10 border-green-500/20;
+  }
+
+  .indicator-sell {
+    @apply text-red-500 bg-red-500/10 border-red-500/20;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.font-black-caps {
+  @apply font-black uppercase tracking-[0.2em] text-[10px];
+}
